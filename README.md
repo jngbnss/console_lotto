@@ -7,8 +7,8 @@
 2. 입력값 공백 체크 (`InputHandler.emptyCheck`)
 3. 문자열 → 정수 변환 (`PurchaseAmount` 도메인)
 4. 값 검증 (`PurchaseAmountValidator`)
-    - 1,000원 단위인지
-    - 음수 또는 숫자 외 입력 체크
+   - 1,000원 단위인지
+   - 음수 또는 숫자 외 입력 체크
 
 ### 예외 처리
 - 숫자가 아닌 경우 → `IllegalArgumentException`
@@ -30,8 +30,8 @@
 ### 절차
 1. 구입 금액 / 1,000 → 구매 가능한 로또 개수 계산
 2. 랜덤 로또 번호 생성 (`GenerateLottoNumbers`)
-    - 1~45 중복 없는 번호 6개
-    - 오름차순 정렬
+   - 1~45 중복 없는 번호 6개
+   - 오름차순 정렬
 3. 구매한 로또 번호 출력 (`OutputView.showLotteries`)
 
 ### MVC/SRP
@@ -51,8 +51,8 @@
 2. 입력값 공백 체크
 3. 문자열 → 로또 번호 변환 (`Converter.lottoConverter`)
 4. 값 검증 (`Lotto` 클래스)
-    - 1~45 범위
-    - 중복 없는 6개 숫자
+   - 1~45 범위
+   - 중복 없는 6개 숫자
 
 ### 예외 처리
 - 범위 벗어난 숫자 → `IllegalArgumentException`
@@ -76,8 +76,8 @@
 2. 입력값 공백 체크
 3. 문자열 → 정수 변환 (`Converter.intConverter`)
 4. 값 검증 (`WinningLotto.validateBonusNumberNotDuplicate`)
-    - 1~45 범위
-    - 당첨 번호와 중복 체크
+   - 1~45 범위
+   - 당첨 번호와 중복 체크
 
 ### 예외 처리
 - 범위 벗어난 번호 → `IllegalArgumentException`
@@ -97,15 +97,15 @@
 
 ### 절차
 1. 로또 체커 생성 (`LottoChecker`)
-    - 당첨 번호 + 보너스 번호 전달
+   - 당첨 번호 + 보너스 번호 전달
 2. 로또 결과 계산 (`LottoResultService.calculateResult`)
-    - 구매한 로또 각각 비교
-    - 등수 판정 (`Rank.valueOf(matchCount, bonusMatch)`)
-    - `LottoResult.addResult` 호출
+   - 구매한 로또 각각 비교
+   - 등수 판정 (`Rank.valueOf(matchCount, bonusMatch)`)
+   - `LottoResult.addResult` 호출
 3. DTO 변환 (`LottoResultService.toDtoList`)
-    - 수익률 포함
+   - 수익률 포함
 4. 결과 출력 (`OutputView.printStatics`)
-    - 등수별 일치 개수, 보너스 여부, 상금, 당첨 개수
+   - 등수별 일치 개수, 보너스 여부, 상금, 당첨 개수
 
 ### MVC/SRP
 - **Domain**: `LottoChecker`, `LottoResult`

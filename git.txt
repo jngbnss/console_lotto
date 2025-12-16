@@ -15,7 +15,7 @@ git pull
 
 
 git add .
-git commit -m "feat: 완료"
+git commit -m "chore: 초기 설정 완료"
 git push
 
 git commit -m "feat: 함수형 인터페이스"
