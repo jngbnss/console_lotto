@@ -13,7 +13,7 @@ public class Lotto {
 
     public Lotto(List<Integer> lotto) {
         validate(lotto);
-        this.numbers = lotto;
+        this.numbers = List.copyOf(numbers);
     }
 
     private void validate(List<Integer>numbers){

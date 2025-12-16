@@ -1,8 +1,7 @@
-package model;
-
 import static org.assertj.core.api.Assertions.*;
 
 import java.util.List;
+import model.Lotto;
 import org.junit.jupiter.api.Test;
 
 class LottoTest {
